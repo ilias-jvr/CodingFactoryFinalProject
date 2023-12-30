@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+    mysql-db:
+        image: mysql:latest
+        container_name: mysql-db
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: rootpass
+            MYSQL_DATABASE: patiently
+            MYSQL_USER: patiently
+            MYSQL_PASSWORD: patientlypass
+        volumes:
+            - mysql-data:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        container_name: phpmyadmin
+        ports:
+            - '8080:80'
+        environment:
+            PMA_ARBITRARY: 1
+            PMA_HOST: mysql-db
+            PMA_USER: patiently
+            PMA_PASSWORD: patientlypass
+
+volumes:
+    mysql-data:

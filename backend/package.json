@@ -1,0 +1,43 @@
+{
+    "name": "doctor-patient-management-api",
+    "version": "1.0",
+    "description": "API for managing doctor's patients data and sessions",
+    "main": "index.js",
+    "scripts": {
+        "prestart": "npm install",
+        "start": "node index.js",
+        "lint": "eslint src/js",
+        "dev": "node --watch index.js"
+    },
+    "keywords": [
+        "swagger"
+    ],
+    "license": "Unlicense",
+    "private": true,
+    "dependencies": {
+        "bcrypt": "^5.1.1",
+        "bcryptjs": "^2.4.3",
+        "bootstrap": "^5.3.2",
+        "bootstrap-vue": "^2.23.1",
+        "connect": "^3.2.0",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "express": "^4.18.2",
+        "express-validator": "^7.0.1",
+        "http": "^0.0.1-security",
+        "js-yaml": "^3.3.0",
+        "jsonwebtoken": "^9.0.2",
+        "mysql2": "^3.6.5",
+        "nodeenv": "^3.0.75",
+        "oas3-tools": "^2.2.3",
+        "path": "^0.12.7",
+        "typeorm": "^0.3.17",
+        "vue": "^2.7.15"
+    },
+    "devDependencies": {
+        "prettier": "3.1.1"
+    },
+    "lint-staged": {
+        "**/*": "prettier --write --ignore-unknown"
+    }
+}
